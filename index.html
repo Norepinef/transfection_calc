@@ -43,7 +43,7 @@
     <input type="number" id="M3" value="1" step="any" required>
   </div>
   <div>
-    <label for="working_volume">Объем наработки (кол-во флаконов):</label>
+    <label for="working_volume">Объем наработки (кол-во флаконов при адгезии или мл среды в суспензии):</label>
     <input type="number" id="working_volume" value="1" required>
   </div>
   <div>
@@ -157,12 +157,12 @@
     const resultsPEI = document.getElementById("results-PEI");
     resultsPEI.innerHTML = `
       <tr><td>Суммарное количество PEI</td><td>${(total_PEI).toFixed(2)} мкл</td></tr>
-      <tr><td>Среда для PEI</td><td>${(media_for_PEI).toFixed(2)} мкл</td></tr>
+      <tr><td>Среда для PEI</td><td>${(media_for_PEI).toFixed(2)} мл</td></tr>
     `;
 
     const resultsDNA = document.getElementById("results-DNA");
     resultsDNA.innerHTML = `
-      <tr><td>Среда для ДНК</td><td>${(media_for_DNA).toFixed(2)} мкл</td></tr>
+      <tr><td>Среда для ДНК</td><td>${(media_for_DNA).toFixed(2)} мл</td></tr>
       <tr><td>Объем pAAV-Helper</td><td>${(Volume1).toFixed(2)} мкл</td></tr>
       <tr><td>Объем capsid AAV</td><td>${(Volume2).toFixed(2)} мкл</td></tr>
       <tr><td>Объем AAV pITR</td><td>${(Volume3).toFixed(2)} мкл</td></tr>
