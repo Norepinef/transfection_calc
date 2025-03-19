@@ -154,25 +154,27 @@
     const DMEM_per_dish = (media_for_DNA + total_plasmid_volume * 0.001 + media_for_PEI + total_PEI * 0.001) / working_volume;
 
     // Отображаем результаты
-    const resultsPEI = document.getElementById("results-PEI");
+        const resultsPEI = document.getElementById("results-PEI");
     resultsPEI.innerHTML = `
+      <p>Расчет для адгезионных HEK293</p>
       <tr><td>Суммарное количество PEI</td><td>${(total_PEI).toFixed(2)} мкл</td></tr>
       <tr><td>Среда для PEI</td><td>${(media_for_PEI).toFixed(2)} мл</td></tr>
     `;
-
+    
     const resultsDNA = document.getElementById("results-DNA");
     resultsDNA.innerHTML = `
-      <tr><td>Среда для ДНК</td><td>${(media_for_DNA).toFixed(2)} мл</td></tr>
-      <tr><td>Объем pAAV-Helper</td><td>${(Volume1).toFixed(2)} мкл</td></tr>
-      <tr><td>Объем capsid AAV</td><td>${(Volume2).toFixed(2)} мкл</td></tr>
-      <tr><td>Объем AAV pITR</td><td>${(Volume3).toFixed(2)} мкл</td></tr>
+      <tr><td>Объем pAAV-Helper</td><td>${(Volume1).toFixed(1)} мкл</td></tr>
+      <tr><td>Объем capsid AAV</td><td>${(Volume2).toFixed(1)} мкл</td></tr>
+      <tr><td>Объем AAV pITR</td><td>${(Volume3).toFixed(1)} мкл</td></tr>
+      <tr><td>Среда для ДНК</td><td>${(media_for_DNA).toFixed(1)} мл</td></tr>
     `;
 
     // Выводим информацию о миксе с DMEM
     const mixSummary = document.getElementById("mix-summary");
     mixSummary.innerHTML = `
-      <p>Объем микса с DMEM на чашку: ${DMEM_per_dish.toFixed(2)} мл</p>
-      <p>Суммарно микс занимает объем: ${(working_volume * K * 3).toFixed(2)} мл</p>
+      <p>Расчет для адгезионных HEK293:</p>
+      <p>Объем микса с DMEM на чашку: ${DMEM_per_dish.toFixed(1)} мл</p>
+      <p>Суммарно микс занимает объем: ${(working_volume * K * 3).toFixed(1)} мл</p>
     `;
   }
 
